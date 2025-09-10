@@ -1,0 +1,11 @@
+package loopsprac;
+
+public class Base1 {
+	
+    int a;
+
+    Base1(int a) {
+        this.a = a;
+        System.out.println("Inside base constructor");
+    }
+}
