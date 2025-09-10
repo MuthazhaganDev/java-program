@@ -1,0 +1,23 @@
+package loopsprac;
+import java.util.Arrays;
+
+public class MoveZeroes {
+    public static void moveZeroes(int[] arr) {
+        int index = 0; // place to put non-zero
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr[index++] = arr[i];
+            }
+        }
+        while (index < arr.length) {
+            arr[index++] = 0; // fill remaining with zero
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 0, 3, 12};
+        System.out.println("Before: " + Arrays.toString(arr));
+        moveZeroes(arr);
+        System.out.println("After: " + Arrays.toString(arr));
+    }
+}
